@@ -1,0 +1,269 @@
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* set up the body */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: rgba(245, 247, 251, 1);
+  color: rgba(41, 50, 100, 1);
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+ *,
+ *::before,
+ *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Makes hidden atribute work */
+[hidden] {
+  display: none !important;
+}
+
+.quiz--container {
+  padding-inline: 20px;
+}
+
+.quiz {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  padding-block: 15px;
+  border-bottom: 1px solid rgba(41, 50, 100, 1);;
+  font-size: 14px;
+  text-align: center;
+}
+.quiz span {
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 10px;
+  padding-block: 5px;
+  padding-inline: 3px;
+}
+
+.quiz>p {
+  margin-bottom: 12px;
+}
+
+.quiz > .answers {
+  display: flex;
+  gap: 13px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  font-size: 10px;
+  gap: 8px;
+}
+
+.score {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 12.8px;
+  line-height: 15px;
+  text-align: center;
+}
+
+.center-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  grid-row: auto;
+}
+
+.correct--selected {
+  background-color: rgba(148, 215, 162, 1);
+}
+
+.correct--not--selected {
+  background-color: rgba(248, 188, 188, 1);
+  opacity: 0.5;
+}
+
+.not--selected--checked {
+  border: 1px solid rgba(219, 222, 240, 1);
+  opacity: 0.5;
+}
+
+.not--selected {
+  border: 1px solid rgba(219, 222, 240, 1);
+}
+
+.selected {
+  border: 1px solid rgba(219, 222, 240, 1);
+  background-color: rgba(214, 219, 245, 1);
+}
+
+.landing-page >h1 {
+  font-size: 30.25px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.landing-page > h2 {
+  margin-bottom: 35px;
+  margin-top: 35px;
+}
+
+.main {
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+}
+
+.main::before {
+  position: absolute;
+  content: "";
+  background-image: url("./images/blob-lemony.png");
+  width: 158px;
+  height: 141px;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main::after {
+  position: fixed;
+  content: "";
+  background-image: url("./images/blob-baby.png");
+  width: 148px;
+  height: 118px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  width: 12.0625rem;
+  height: 3.25rem;
+  background-color: rgba(77, 91, 158, 1);
+  color: rgba(245, 247, 251, 1);
+  border: none;
+  border-radius: 0.9375rem;
+  cursor: pointer;
+
+  }
+  .btn-land{
+    margin-left: 4.5rem;
+  }
+  .btn:active {
+      box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+    }
+
+  .btn:focus {
+    outline: none;
+  }
+
+    .quiz--container {
+      padding-inline: 20px;
+    }
+  
+    @media (max-width: 35.98em) {
+      .quiz--container {
+        padding-inline: 10px;
+      }
+    }
+  
+    .quiz {
+      font-family: Karla;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 19px;
+      padding-block: 15px;
+      border-bottom: 1px solid rgb(219, 222, 240);
+    }
+  
+    @media (max-width: 35.98em) {
+      .quiz {
+        font-size: 14px;
+      }
+    }
+  
+    .quiz>p {
+      margin-bottom: 12px;
+    }
+  
+    .quiz>.answers {
+      display: flex;
+      gap: 13px;
+      font-family: Inter;
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    @media (max-width: 35.98em) {
+      .quiz>.answers {
+        font-size: 10px;
+        gap: 8px;
+      }
+    }
+  
+    .quiz>.answers span {
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  
+    @media (max-width: 35.98em) {
+      .quiz > .answers span {
+        font-size: 10px;
+        padding-block: 5px;
+        padding-inline: 3px;
+      }
+    }
